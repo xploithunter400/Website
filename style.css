@@ -1,0 +1,134 @@
+/* Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Background video covers entire page */
+#bg-video {
+  position: fixed; /* stays even when scrolling */
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1; /* behind everything */
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+/* Content above video */
+.content {
+  position: relative;
+  z-index: 1;
+  color: white; 
+  text-align: left;  /* left align all text */
+  padding-left: 50px; /* space from left edge */
+}
+
+/* Navbar row */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.nav-bar h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: tomato;
+}
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+/* Active link always red */
+.nav-links a.active,
+.nav-links a.active:hover {
+  color: red;
+}
+
+/* center & style */
+main {
+  text-align: right;  /* left align */
+  margin-top: 100px;
+  color: white;
+  font-family: Arial, sans-serif;
+  max-width: 900px;   /* optional: limit width */
+}
+
+/* typing container size/style */
+.welcome-text { 
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* blinking cursor attached to the outer span */
+#typing::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 6px;
+  animation: blink 0.7s steps(1) infinite;
+  vertical-align: bottom;
+}
+
+/* ensure strong text looks bold and colored */
+#typing strong {
+  font-weight: 800;
+  color: #ffcc00; /* optional highlight */
+}
+
+/* subtitle fade after typing completes (optional) */
+/* Subtitle full width */
+.subtitle {
+  font-size: 1.2rem;
+  line-height: 1.6;       /* spacing for readability */
+  text-align: left;
+  width: calc(100% - 10px);  /* full screen width minus padding */
+  max-width: none;           /* remove any width restrictions */
+  margin-left: 200px;              /* spacing around the subtitle */
+  padding: 0;
+  opacity: 0;                /* hide initially for animation */
+  white-space: pre-line;     /* preserve spaces and line breaks */
+  word-break: break-word;    /* wrap long words if needed */
+}
+
+/* Show the subtitle */
+.subtitle.show {
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+
+/* blink keyframes */
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.strong {
+  color: tomato;
+}

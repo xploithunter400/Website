@@ -1,0 +1,25 @@
+/* Responsive styles for different screen sizes */
+
+/* Tablets and small desktops */
+@media (max-width: 1024px) {
+  h1.headline { font-size: 2.5rem; }
+  .logo img { width: 25%; }
+  .message p { font-size: 0.95rem; }
+  .subtitle { font-size: 1rem; }
+}
+
+/* Tablets and large phones */
+@media (max-width: 768px) {
+  h1.headline { font-size: 2rem; }
+  .logo img { width: 30%; }
+  .message p { font-size: 0.9rem; }
+  .subtitle { font-size: 0.95rem; }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  h1.headline { font-size: 1.5rem; }
+  .logo img { width: 40%; }
+  .message p { font-size: 0.85rem; }
+  .subtitle { font-size: 0.9rem; }
+}
